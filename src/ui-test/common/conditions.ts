@@ -32,7 +32,7 @@ export async function notificationCenterIsOpened(): Promise<boolean | undefined>
 	}
 }
 
-export async function atlasMapWindowExists(): Promise<boolean | undefined> {
+export async function atlasMapWindowExists(): Promise<boolean> {
 	try {
 		const titles = await new Workbench().getEditorView().getOpenEditorTitles();
 		for (const title of titles) {
